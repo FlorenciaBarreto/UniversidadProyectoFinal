@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alumnos - Universidad de Hogwarts</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="alum-style.css">
+    <script src="util.js"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-left">
+            <h1>UNIVERSIDAD DE HOGWARTS</h1>
+            <h4>ESCUELA DE MAGIA Y HECHICERÍA</h4>
+        </div>
+        <div class="header-right">
+            <img src="img/hogwarts-logo.png" alt="Logo Hogwarts">
+        </div>
+    </header>
+
+    <!-- Icono de "Home" en la parte superior derecha -->
+    <a href="index.html" id="home-icon" title="Volver al inicio">
+        <i class="fas fa-home"></i>
+    </a>
+
+    <!-- Main Content -->
+    <div class="container">
+        <h2>Buscar Alumnos</h2>
+
+        <!-- Cuadro de búsqueda -->
+        <div class="search-container">
+            <div class="form-group">
+                <label for="id-nif">Buscar por ID o NIF:</label>
+                <input type="text" id="id-nif" name="id-nif" placeholder="Escribe ID o NIF">
+            </div>
+
+            <div class="form-group">
+                <label for="nombre">Buscar por Nombre:</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Escribe un nombre">
+            </div>
+
+            <button id="search-btn">Buscar</button>
+        </div>
+
+        <!-- Tabla de Alumnos -->
+        <div class="table-container" id="alumnos-container" style="display:none;">
+            <h3>Resultados de la Búsqueda</h3>
+            <table id="alumnos-table">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>NIF</th>
+                        <th>Nombre</th>
+                        <th>Apellido1</th>
+                        <th>Apellido2</th>
+                        <th>Ciudad</th>
+                        <th>Sexo</th>
+                        <th>Acción</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Los resultados de los alumnos se llenarán aquí dinámicamente -->
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Tabla de Asignaturas -->
+        <div class="table-container" id="asignaturas-container" style="display:none;">
+            <h3>Asignaturas del Alumno Seleccionado</h3>
+            <table id="asignaturas-table">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Nombre</th>
+                        <th>Créditos</th>
+                        <th>Curso</th>
+                        <th>Cuatrimestre</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Las asignaturas del alumno se llenarán aquí dinámicamente -->
+                </tbody>
+            </table>
+            <p id="no-asignaturas" style="display:none;">Este alumno no está matriculado en ninguna asignatura.</p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Universidad de Hogwarts. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- Botón "Volver Arriba" -->
+    <button id="scroll-to-top" title="Volver arriba">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+</body>
+</html>

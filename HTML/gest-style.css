@@ -1,0 +1,125 @@
+/* General Reset para gestion.html */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    padding-top: 100px; /* Space for the fixed header */
+    padding-bottom: 60px; /* Space for the fixed footer */
+    color: #333;
+}
+
+/* Header específico para la página de Gestión */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #0E4450; /* Fondo oscuro azul */
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+.header-left h1 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #F39C12; /* Naranja dorado para resaltar el título */
+}
+
+.header-left h4 {
+    font-size: 16px;
+    font-weight: normal;
+}
+
+.header-right img {
+    height: 60px;
+    width: auto;
+}
+
+/* Main Content */
+.container {
+    margin: 100px auto 0;
+    padding: 20px;
+    width: 80%;
+    max-width: 1200px;
+}
+
+h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+/* Footer específico para la página de Gestión */
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #0E4450;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-size: 14px;
+}
+
+footer p {
+    margin: 0;
+    font-weight: lighter;
+}
+
+/* Icono de "Home" */
+#home-icon {
+    position: fixed;
+    top: 100px;
+    right: 20px;
+    background-color: #F39C12;
+    color: white;
+    padding: 10px;
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    font-size: 24px;
+    z-index: 1000;
+    transition: background-color 0.3s ease;
+}
+
+#home-icon:hover {
+    background-color: #D87E14;
+}
+
+#home-icon i {
+    margin: 0;
+    font-size: 24px;
+}
+
+/* Botón "Volver Arriba" */
+#scroll-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #F39C12;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    padding: 15px;
+    font-size: 24px;
+    cursor: pointer;
+    display: none; /* Initially hidden */
+    z-index: 1000;
+}
+
+#scroll-to-top:hover {
+    background-color: #D87E14;
+}
+
+#scroll-to-top:focus {
+    outline: none;
+}

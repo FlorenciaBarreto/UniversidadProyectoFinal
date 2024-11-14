@@ -1,0 +1,218 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    padding-top: 100px; /* Space for the fixed header */
+    padding-bottom: 60px; /* Space for the fixed footer */
+    color: #333;
+}
+
+/* Header */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #0E4450; /* Fondo oscuro azul */
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+.header-left h1 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #F39C12; /* Naranja dorado para resaltar el título */
+}
+
+.header-left h4 {
+    font-size: 16px;
+    font-weight: normal;
+}
+
+.header-right img {
+    height: 60px;
+    width: auto;
+}
+
+/* Main Content (Grid de tarjetas) */
+.container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    width: 80%;
+    max-width: 1200px;
+    margin: 100px auto 0; /* Ajustado para el header fijo */
+}
+
+.card {
+    position: relative;
+    height: 250px;
+    border-radius: 10px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column; /* Coloca el contenido de la tarjeta en columna */
+    justify-content: flex-end; /* Coloca el contenido en la parte inferior */
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.card .card-content {
+    text-align: center;
+    z-index: 1;
+}
+
+.card i {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.card button {
+    padding: 10px 20px;
+    background-color: #F39C12; /* Naranja dorado para los botones */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.card button:hover {
+    background-color: #D87E14; /* Color más oscuro de naranja al pasar el mouse */
+}
+
+/* Responsividad */
+@media (max-width: 1024px) {
+    .container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Footer */
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #0E4450; /* Fondo azul oscuro */
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-size: 14px;
+}
+
+footer p {
+    margin: 0;
+    font-weight: lighter;
+}
+
+/* Icono de "Home" */
+#home-icon {
+    position: fixed;
+    top: 100px;
+    right: 20px;
+    background-color: #F39C12;
+    color: white;
+    padding: 10px;
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    font-size: 24px;
+    z-index: 1000;
+    transition: background-color 0.3s ease;
+}
+
+#home-icon:hover {
+    background-color: #D87E14;
+    cursor: pointer;
+}
+
+#home-icon i {
+    margin: 0;
+    font-size: 24px;
+}
+
+/* CURSOS - Formulario y tabla de asignaturas */
+.container {
+    padding: 20px;
+}
+
+h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+select, table {
+    width: 100%;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+table {
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+/* Botón de volver arriba */
+#scroll-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #F39C12; /* Naranja dorado */
+    color: white;
+    border: none;
+    border-radius: 50%;
+    padding: 15px;
+    font-size: 24px;
+    cursor: pointer;
+    display: none; /* Initially hidden */
+    z-index: 1000;
+}
+
+#scroll-to-top:hover {
+    background-color: #D87E14;
+}
+
+#scroll-to-top:focus {
+    outline: none;
+}

@@ -1,0 +1,196 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    padding-top: 100px; /* Space for the fixed header */
+    padding-bottom: 60px; /* Space for the fixed footer */
+    color: #333;
+}
+
+/* Header */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #0E4450; /* Fondo oscuro azul */
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+.header-left h1 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #F39C12; /* Naranja dorado */
+}
+
+.header-left h4 {
+    font-size: 16px;
+    font-weight: normal;
+}
+
+.header-right img {
+    height: 60px;
+    width: auto;
+}
+
+/* Main Content */
+.container {
+    width: 80%;
+    max-width: 1200px;
+    margin: 120px auto 0;
+}
+
+.search-filter {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+.search-filter h2 {
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    font-weight: bold;
+    display: block;
+}
+
+input, select {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #F39C12; /* Naranja dorado */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #D87E14;
+}
+
+/* Tabla de resultados */
+.table-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #0E4450;
+    color: white;
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+#no-results {
+    text-align: center;
+    color: #d9534f;
+    font-size: 18px;
+}
+
+/* Footer */
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #0E4450; /* Fondo azul oscuro */
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-size: 14px;
+}
+
+footer p {
+    margin: 0;
+    font-weight: lighter;
+}
+
+
+/* Botón "Volver arriba" */
+#scroll-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #F39C12; /* Naranja dorado */
+    color: white;
+    border: none;
+    border-radius: 50%;
+    padding: 15px;
+    font-size: 24px;
+    cursor: pointer;
+    display: none; /* Initially hidden */
+    z-index: 1000;
+}
+
+#scroll-to-top:hover {
+    background-color: #D87E14;
+}
+
+#scroll-to-top:focus {
+    outline: none;
+}
+
+/* Estilo para el icono "Home" en la parte superior derecha */
+#home-icon {
+    position: fixed;
+    top: 100px; /* Ajusta la distancia desde la parte superior para que quede por debajo del header */
+    right: 20px; /* Ajusta la distancia desde el borde derecho */
+    background-color: #F39C12; /* Color de fondo */
+    color: white; /* Color del icono */
+    padding: 10px;
+    border-radius: 50%; /* Hace que el icono tenga forma redonda */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    font-size: 24px;
+    z-index: 1000; /* Asegura que quede sobre otros elementos */
+    transition: background-color 0.3s ease; /* Efecto de transición para el hover */
+}
+
+#home-icon:hover {
+    background-color: #D87E14; /* Color de fondo al hacer hover */
+    cursor: pointer; /* Cambia el cursor cuando pasa sobre el icono */
+}
+
+#home-icon i {
+    margin: 0;
+    font-size: 24px; /* Tamaño del icono */
+}
