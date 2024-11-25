@@ -7,6 +7,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <script src="util.js"></script>
+    <script src="scriptCursos.js"></script>
 </head>
 <body>
     <!-- Header -->
@@ -32,14 +33,13 @@
         <!-- Combo de selección de grados -->
         <div class="form-group">
             <label for="grado">Seleccionar Grado:</label>
-            <select id="grado" name="grado">
-                <option value="">--Selecciona un grado--</option>
+            <select id="grado" name="grado" onchange="listaAsignaturas();">                
                 <!-- Opciones de grados serán agregadas dinámicamente aquí -->
             </select>
         </div>
 
         <!-- Tabla de asignaturas -->
-        <div class="table-container" id="asignaturas-container" style="display:none;">
+        <div class="table-container" id="asignaturas-container" style="display:table;">
             <h3>Asignaturas del Grado Seleccionado</h3>
             <table id="asignaturas-table">
                 <thead>
@@ -49,15 +49,17 @@
                         <th>Créditos</th>
                         <th>Curso</th>
                         <th>Cuatrimestre</th>
-                        <th>Profesor</th>
+                        <th>Nombre Profesor</th>
+                        <th>Apellido Profesor</th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody id="resultados-asignaturas">
                     <!-- Las filas se llenarán dinámicamente con los datos -->
                 </tbody>
             </table>
-            <p id="no-asignaturas" style="display:none;">No hay asignaturas disponibles para este grado.</p>
+            
         </div>
+        <p id="no-asignaturas" style="display:none;">No hay asignaturas disponibles para este grado.</p>
     </div>
 
     <!-- Footer -->

@@ -7,6 +7,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="alum-style.css">
     <script src="util.js"></script>
+    <script src="scriptAlumnos.js"></script>
 </head>
 <body>
     <!-- Header -->
@@ -32,8 +33,8 @@
         <!-- Cuadro de búsqueda -->
         <div class="search-container">
             <div class="form-group">
-                <label for="id-nif">Buscar por ID o NIF:</label>
-                <input type="text" id="id-nif" name="id-nif" placeholder="Escribe ID o NIF">
+                <label for="identificador">Buscar por ID o NIF (excluyendo la letra):</label>
+                <input type="text" id="identificador" name="identificador" placeholder="Escribe ID o NIF">
             </div>
 
             <div class="form-group">
@@ -41,7 +42,7 @@
                 <input type="text" id="nombre" name="nombre" placeholder="Escribe un nombre">
             </div>
 
-            <button id="search-btn">Buscar</button>
+            <button id="search-btn" onclick="buscarAlumnos()">Buscar</button>
         </div>
 
         <!-- Tabla de Alumnos -->
@@ -57,10 +58,9 @@
                         <th>Apellido2</th>
                         <th>Ciudad</th>
                         <th>Sexo</th>
-                        <th>Acción</th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody id="resultados-alumnos">
                     <!-- Los resultados de los alumnos se llenarán aquí dinámicamente -->
                 </tbody>
             </table>
@@ -79,13 +79,15 @@
                         <th>Cuatrimestre</th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody id="resultados-asignaturas">
                     <!-- Las asignaturas del alumno se llenarán aquí dinámicamente -->
                 </tbody>
             </table>
-            <p id="no-asignaturas" style="display:none;">Este alumno no está matriculado en ninguna asignatura.</p>
+            
         </div>
     </div>
+    <p id="no-alumnos" style="display:none;">No se han encontrado alumnos.</p>
+    <p id="no-asignaturas" style="display:none;">Este alumno no está matriculado en ninguna asignatura.</p>
 
     <!-- Footer -->
     <footer>

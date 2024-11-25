@@ -58,6 +58,69 @@ h2 {
     margin-bottom: 20px;
 }
 
+/* Alineación horizontal de los campos */
+.form-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.form-group {
+    width: 30%;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+/* Estilo de la lista de asignaturas */
+.asignaturas {
+    margin-top: 30px;
+}
+
+.asignaturas h3 {
+    margin-bottom: 20px; /* Aumentamos el espacio debajo del título */
+}
+
+.asignaturas ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.asignaturas li {
+    margin-bottom: 10px;
+}
+
+.asignaturas label {
+    margin-left: 10px;
+}
+
+#matricularBtn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #F39C12;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+#matricularBtn:hover {
+    background-color: #D87E14;
+}
+
 /* Footer específico para la página de Gestión */
 footer {
     position: fixed;
