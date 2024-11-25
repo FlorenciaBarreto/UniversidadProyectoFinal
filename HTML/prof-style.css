@@ -1,3 +1,4 @@
+/* General Reset */
 * {
     margin: 0;
     padding: 0;
@@ -5,11 +6,11 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    font-family: 'Arial', sans-serif;
+    background-color: #F9E4E9; /* Rosa claro de fondo */
     padding-top: 100px; /* Space for the fixed header */
     padding-bottom: 60px; /* Space for the fixed footer */
-    color: #333;
+    color: #3C3C3C; /* Gris oscuro para el texto */
 }
 
 /* Header */
@@ -18,7 +19,7 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    background-color: #0E4450; /* Fondo oscuro azul */
+    background-color: #D5A6BD; /* Rosa suave */
     color: white;
     padding: 10px 20px;
     display: flex;
@@ -30,12 +31,13 @@ header {
 .header-left h1 {
     font-size: 24px;
     font-weight: bold;
-    color: #F39C12; /* Naranja dorado */
+    color: #FFFFFF; /* Blanco puro para el título */
 }
 
 .header-left h4 {
     font-size: 16px;
     font-weight: normal;
+    color: #3C3C3C; /* Gris oscuro para el subtítulo, para buen contraste */
 }
 
 .header-right img {
@@ -47,56 +49,60 @@ header {
 .container {
     width: 80%;
     max-width: 1200px;
-    margin: 120px auto 0;
+    margin: 150px auto 0;
 }
 
 .search-filter {
     background-color: #fff;
-    padding: 20px;
+    padding: 25px;
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     margin-bottom: 30px;
 }
 
 .search-filter h2 {
-    font-size: 22px;
+    font-size: 24px;
+    color: #F06D8F; /* Rosa fuerte para los títulos */
     margin-bottom: 20px;
 }
 
 .form-group {
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
 label {
     font-weight: bold;
     display: block;
+    color: #F06D8F; /* Rosa fuerte para las etiquetas */
 }
 
 input, select {
     width: 100%;
-    padding: 8px;
+    padding: 10px;
     margin-top: 5px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    border: 1px solid #F1B6C0; /* Rosa claro para los bordes */
+    border-radius: 5px;
 }
 
 button {
-    padding: 10px 20px;
-    background-color: #F39C12; /* Naranja dorado */
+    padding: 12px 25px;
+    background-color: #F5A5B8; /* Rosa suave para los botones */
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
 }
 
 button:hover {
-    background-color: #D87E14;
+    background-color: #F06D8F; /* Rosa más oscuro al pasar el mouse */
 }
 
 /* Tabla de resultados */
 .table-container {
     background-color: #fff;
-    padding: 20px;
+    padding: 25px;
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
@@ -104,17 +110,18 @@ button:hover {
 table {
     width: 100%;
     border-collapse: collapse;
+    margin-top: 20px;
 }
 
 th, td {
-    padding: 10px;
+    padding: 12px;
     text-align: left;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid #F1B6C0; /* Rosa claro para el borde */
 }
 
 th {
-    background-color: #0E4450;
-    color: white;
+    background-color: #F9E4E9; /* Fondo rosa claro en la tabla */
+    color: #F06D8F; /* Rosa fuerte para el texto */
 }
 
 tr:hover {
@@ -133,7 +140,7 @@ footer {
     bottom: 0;
     left: 0;
     width: 100%;
-    background-color: #0E4450; /* Fondo azul oscuro */
+    background-color: #D5A6BD; /* Rosa suave */
     color: white;
     text-align: center;
     padding: 10px;
@@ -145,13 +152,12 @@ footer p {
     font-weight: lighter;
 }
 
-
 /* Botón "Volver arriba" */
 #scroll-to-top {
     position: fixed;
     bottom: 30px;
     right: 30px;
-    background-color: #F39C12; /* Naranja dorado */
+    background-color: #F5A5B8; /* Rosa suave */
     color: white;
     border: none;
     border-radius: 50%;
@@ -163,19 +169,19 @@ footer p {
 }
 
 #scroll-to-top:hover {
-    background-color: #D87E14;
+    background-color: #F06D8F; /* Rosa más oscuro */
 }
 
 #scroll-to-top:focus {
     outline: none;
 }
 
-/* Estilo para el icono "Home" en la parte superior derecha */
+/* Icono "Home" */
 #home-icon {
     position: fixed;
     top: 100px; /* Ajusta la distancia desde la parte superior para que quede por debajo del header */
     right: 20px; /* Ajusta la distancia desde el borde derecho */
-    background-color: #F39C12; /* Color de fondo */
+    background-color: #F5A5B8; /* Rosa para el icono */
     color: white; /* Color del icono */
     padding: 10px;
     border-radius: 50%; /* Hace que el icono tenga forma redonda */
@@ -186,7 +192,7 @@ footer p {
 }
 
 #home-icon:hover {
-    background-color: #D87E14; /* Color de fondo al hacer hover */
+    background-color: #F06D8F; /* Rosa más oscuro al hacer hover */
     cursor: pointer; /* Cambia el cursor cuando pasa sobre el icono */
 }
 
