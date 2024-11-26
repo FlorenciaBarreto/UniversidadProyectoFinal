@@ -35,7 +35,7 @@ function listaGrados(){
             let out = '<option value=""> -- Seleccione -- </option>';
 
             for(let item of arrayGrados){
-                    out += '<option value="'+item.id+'">'+item.nombre+'</option>';                            
+                    out += '<option value="'+item.id+'">'+item.nombre+'</option>';                          
             }
 
             desplegable.innerHTML = out;            
