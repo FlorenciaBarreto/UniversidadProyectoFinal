@@ -1,9 +1,22 @@
+/**
+ * Service Alumnos
+ * @namespace alumnosService
+ */
+
+
+
 const db = require('./db');
 const helper = require('../helper');
 
 
 //🌺🌺🌺🌺🌺🌺🌺🌺🌺🌺🌺🌺🌺🌺🌺🌺🌺🌺🌺🌺🌺🌺🌺🌺🌺🌺🌺🌺🌺
-//GET POR ID o NOMBRE a se mostrarán en una tabla a continuación con los campos: Id, NIF, Nombre, Apellido1, Apellido2, Ciudad, Sexo.
+/**
+ * Filtrar alumnos por id, nif o nombre.
+ * @function getAlumnoPorIdentificador
+ * @memberof alumnosService
+ * @param {Object} filtro - Tiene identificador y nombre y se utilizan para filtrar.
+ * @returns {object} Un JSON con toda la información de los alumnos que cumplan con ese filtro.
+ */
 
 async function getAlumnoPorIdentificador(filtro){
   let sql = 'SELECT id, nif, nombre, apellido1, apellido2, ciudad, sexo FROM alumno WHERE ';
@@ -32,7 +45,13 @@ async function getAlumnoPorIdentificador(filtro){
 
 
 //🌺🌺🌺🌺🌺🌺🌺🌺🌺🌺🌺🌺🌺🌺🌺🌺🌺🌺🌺🌺🌺🌺🌺🌺🌺🌺🌺🌺🌺
-//GET LISTA DE ASINATURAS  se deben de mostrar los campos: id, Nombre, Créditos, curso y cuatrimestre
+/**
+ * Lista de todas las asignaturas en las que esté inscripto un alumno.
+ * @function getAsignaturas
+ * @memberof alumnosService
+ * @param {number} id 
+ * @returns {object} Un JSON con una lista de asignaturas y la información de las mismas.
+ */
 
 async function getAsignaturas(id){
   let sql = 'SELECT a.Id, a.nombre, a.creditos, a.curso, a.cuatrimestre FROM asignatura a JOIN alumno_se_matricula_asignatura m ON a.Id = m.id_asignatura WHERE m.id_alumno = '+ id + ';';
@@ -43,7 +62,6 @@ async function getAsignaturas(id){
   const info = helper.emptyOrRows(rows);
   return{info};
 }
-
 
 
 
