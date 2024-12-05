@@ -195,3 +195,20 @@ footer p {
 #scroll-to-top:focus {
     outline: none;
 }
+
+
+
+#no-alumnos, #no-asignaturas {
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%; /* O el tamaño que desees */
+    margin-top: 30px; 
+    margin-bottom: 30px; 
+    color: #F06D8F;
+    text-align: center;
+    width: 75%;
+}

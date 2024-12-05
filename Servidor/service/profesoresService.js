@@ -65,7 +65,7 @@ async function filtrarProfesores(filtro) {
 
   if(filtro.apellido1 != undefined){
     if(hasPrevious){
-      sql += ' OR ';
+      sql += ' AND ';
     }
     sql += 'p.apellido1 LIKE "%' + filtro.apellido1 + '%"';    
     hasPrevious=true;
@@ -73,7 +73,7 @@ async function filtrarProfesores(filtro) {
 
   if(filtro.sexo != undefined){
     if(hasPrevious){
-      sql += ' OR ';
+      sql += ' AND ';
     }
     sql += 'p.sexo="' + filtro.sexo + '"';
     hasPrevious=true;
@@ -81,7 +81,7 @@ async function filtrarProfesores(filtro) {
 
   if(filtro.departamento != undefined){
     if(hasPrevious){
-      sql += ' OR ';
+      sql += ' AND ';
     }
     sql += 'd.nombre LIKE "%' + filtro.departamento + '%"';
   }
